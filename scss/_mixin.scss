@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+@mixin font-ja {
+	font-family: "Noto Sans JP", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+@mixin font-en {
+	font-family: "Seymour One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+@mixin jose {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+//font-style: normal;
+}
+@mixin u {
+font-family: 'Urbanist', sans-serif;
+font-weight: 400;
+//font-style: normal;
+}
+@mixin ub {
+font-family: 'Urbanist', sans-serif;
+font-weight: 700;
+//font-style: normal;
+}
+
+
+@mixin anim {
+transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@mixin bg-c {
+background-size:cover;
+background-repeat:no-repeat;
+background-position:50% 50%;
+}
+@mixin bg-l {
+//background-size:cover;
+background-repeat:no-repeat;
+background-position:0 50%;
+}
+@mixin bg-r {
+//background-size:cover;
+background-repeat:no-repeat;
+background-position:0 100%;
+}
+
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block; 
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin flex-space {// space-between
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+	> * {
+	flex:0 0 auto;
+	}
+}
+@mixin flex-center {// center
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+	> * {
+	flex:0 0 auto;
+	}
+}
+@mixin flex-start {// left
+display:flex;
+flex-wrap:wrap;
+justify-content:flex-start;
+	> * {
+	flex:0 0 auto;
+	}
+}
+@mixin flex-end {// right
+display:flex;
+flex-wrap:wrap;
+justify-content:flex-end;
+	> * {
+	flex:0 0 auto;
+	}
+}
+@mixin flex-middle {// v middle
+display:flex;
+justify-content:center;
+align-items:center;
+	> * {
+	flex:0 0 auto;
+	}
+}
+@mixin flex-bottom {// v middle
+display:flex;
+justify-content:center;
+align-items:flex-end;
+	> * {
+	flex:0 0 auto;
+	}
+}
+
+@mixin flex-left {// align left
+justify-content:flex-start;
+}
+@mixin flex-right {// align right
+justify-content:flex-end;
+}

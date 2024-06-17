@@ -1,0 +1,550 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+/*======================================================================
+ * 採用情報 レイアウト
+======================================================================*/
+/* -----
+ * g-page-container
+----------------------------------------------------------------------------- */
+.g-page-container {
+  padding: 120px 0 215px;
+  background: #f9f9f9;
+}
+@media screen and (max-width: 768px) {
+  .g-page-container {
+    padding: 40px 0 100px;
+  }
+}
+
+/* -----
+ * page-link
+----------------------------------------------------------------------------- */
+.page-link {
+  margin: 70px 0 85px;
+}
+@media screen and (max-width: 768px) {
+  .page-link {
+    margin: 40px 0 55px;
+  }
+}
+.page-link ul li {
+  width: 171px;
+}
+@media screen and (max-width: 768px) {
+  .page-link ul li {
+    width: auto;
+    padding: 0 0.875em;
+  }
+}
+/* -----
+ * エントリー
+----------------------------------------------------------------------------- */
+.head-entry {
+  padding: 5em 2.5em 4.375em;
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .head-entry {
+    max-width: calc(100% - 10.6666vw);
+    margin: 0 auto;
+    padding: 2.5em 5.33vw;
+  }
+}
+.head-entry .entry-text {
+  margin-bottom: 1.5em;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .head-entry .entry-text {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+}
+
+/* -----
+ * 会社情報
+----------------------------------------------------------------------------- */
+.section-about > .adjust-width {
+  max-width: 780px;
+}
+@media screen and (max-width: 1279px) {
+  .section-about > .adjust-width {
+    max-width: calc(750px - 5vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-about > .adjust-width {
+    max-width: 100%;
+  }
+}
+
+.about-block .about-row {
+  padding: 2.625em 0 5em;
+  border-bottom: 1px solid #d5d5d5;
+  text-align: center;
+}
+.about-block .about-row:first-child {
+  padding-top: 0;
+}
+.about-block .about-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.about-block .about-row img {
+  width: 100%;
+}
+.about-block .about-row.-illust01 img {
+  max-width: 538px;
+}
+@media screen and (max-width: 768px) {
+  .about-block .about-row.-illust01 img {
+    max-width: 292px;
+  }
+}
+.about-block .about-row.-illust02 img {
+  max-width: 526px;
+}
+@media screen and (max-width: 768px) {
+  .about-block .about-row.-illust02 img {
+    max-width: 287px;
+  }
+}
+.about-block .about-row.-illust03 img {
+  max-width: 525px;
+}
+@media screen and (max-width: 768px) {
+  .about-block .about-row.-illust03 img {
+    max-width: 289px;
+  }
+}
+.about-block .about-row.-illust04 img {
+  max-width: 453px;
+}
+@media screen and (max-width: 768px) {
+  .about-block .about-row.-illust04 img {
+    max-width: 286px;
+  }
+}
+
+/* -----
+ * 社員紹介
+----------------------------------------------------------------------------- */
+.section-interview > .adjust-width {
+  max-width: 700px;
+}
+@media screen and (max-width: 1279px) {
+  .section-interview > .adjust-width {
+    max-width: calc(750px - 5vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-interview > .adjust-width {
+    max-width: 100%;
+  }
+}
+
+.interview-row {
+  margin: 5em 0;
+  padding-bottom: 5em;
+  border-bottom: 1px solid #d5d5d5;
+}
+@media screen and (max-width: 768px) {
+  .interview-row {
+    margin: 2.5em 0;
+    padding-bottom: 2.5em;
+  }
+}
+.interview-row:first-child {
+  margin-top: 0;
+}
+.interview-row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.interview-row:nth-child(even) .staff-box {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.interview-row .staff-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2em;
+}
+@media screen and (max-width: 768px) {
+  .interview-row .staff-box {
+    display: block;
+  }
+}
+.interview-row .staff-box .staff-image {
+  width: 73.7125%;
+}
+@media screen and (max-width: 768px) {
+  .interview-row .staff-box .staff-image {
+    width: 100%;
+  }
+}
+.interview-row .staff-box .staff-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(100% - 73.7125%);
+}
+@media screen and (max-width: 768px) {
+  .interview-row .staff-box .staff-name {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+.interview-row .staff-box .staff-name .num {
+  margin: 0 0 10px;
+  color: #d5d5d5;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+@media screen and (max-width: 768px) {
+  .interview-row .staff-box .staff-name .num {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .interview-row .staff-box .staff-name .name-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.interview-row .staff-box .staff-name .initial {
+  margin: 0 0 20px;
+  color: #333;
+  font-size: 3.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .interview-row .staff-box .staff-name .initial {
+    margin: 0 20px 0 0;
+    line-height: 1.1;
+  }
+}
+.interview-row .staff-box .staff-name .position {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .interview-row .staff-box .staff-name .position {
+    font-size: 1.3rem;
+  }
+}
+.interview-row .faq-box .faq-row {
+  margin-bottom: 3.125em;
+}
+@media screen and (max-width: 768px) {
+  .interview-row .faq-box .faq-row {
+    margin-bottom: 1.875em;
+  }
+}
+.interview-row .faq-box .faq-row:last-child {
+  margin-bottom: 0;
+}
+.interview-row .faq-box .faq-row .question {
+  margin-bottom: 0.909em;
+  color: #4372c1;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.7454545455;
+}
+@media screen and (max-width: 768px) {
+  .interview-row .faq-box .faq-row .question {
+    margin-bottom: 0.8823em;
+    font-size: 1.7rem;
+  }
+}
+.interview-row .faq-box .faq-row .answer {
+  margin: 0 0 1em;
+  line-height: 1.775;
+}
+@media screen and (max-width: 768px) {
+  .interview-row .faq-box .faq-row .answer {
+    font-size: 1.4rem;
+  }
+}
+.interview-row .faq-box .faq-row .answer:last-child {
+  margin: 0;
+}
+
+/* -----
+ * 社員紹介
+----------------------------------------------------------------------------- */
+.section-company > .adjust-width {
+  max-width: 780px;
+}
+@media screen and (max-width: 1279px) {
+  .section-company > .adjust-width {
+    max-width: calc(750px - 5vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-company > .adjust-width {
+    max-width: 100%;
+  }
+}
+
+.company-block .company-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .company-block .company-row {
+    margin: 0 -10px 5px;
+  }
+}
+.company-block .company-row:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  .company-block .company-row .image {
+    margin: 0 5px;
+  }
+}
+/* -----
+ * 募集要項
+----------------------------------------------------------------------------- */
+.section-description > .adjust-width {
+  max-width: 780px;
+}
+@media screen and (max-width: 1279px) {
+  .section-description > .adjust-width {
+    max-width: calc(750px - 5vw);
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-description > .adjust-width {
+    max-width: 100%;
+  }
+}
+
+.description-box {
+  margin-bottom: 5em;
+  padding-bottom: 5em;
+  border-bottom: 1px solid #d5d5d5;
+}
+@media screen and (max-width: 768px) {
+  .description-box {
+    margin-bottom: 3.125em;
+    padding-bottom: 3.125em;
+  }
+}
+.description-box:last-child {
+  margin-bottom: 30px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+@media screen and (max-width: 768px) {
+  .description-box:last-child {
+    margin-bottom: 0;
+  }
+}
+.description-box h3 {
+  margin: 0 0 20px;
+  color: #4372c1;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3090909091;
+}
+@media screen and (max-width: 768px) {
+  .description-box h3 {
+    font-size: 1.6rem;
+  }
+}
+.description-box .job-description {
+  margin-bottom: 5em;
+}
+@media screen and (max-width: 768px) {
+  .description-box .job-description {
+    margin-bottom: 3.125em;
+  }
+}
+.description-box .job-description:last-child {
+  margin-bottom: 0;
+}
+.description-box .job-description .job-description-title {
+  margin-bottom: 1.875em;
+  padding: 13px 10px;
+  background: #acc4ee;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .description-box .job-description .job-description-title {
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    font-size: 1.3rem;
+  }
+}
+.description-box .job-description .job-description-table {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .description-box .job-description .job-description-table {
+    font-size: 1.3rem;
+  }
+}
+.description-box .job-description .job-description-table tr:first-child th, .description-box .job-description .job-description-table tr:first-child td {
+  padding-top: 0;
+}
+.description-box .job-description .job-description-table tr:last-child th, .description-box .job-description .job-description-table tr:last-child td {
+  padding-bottom: 0;
+}
+.description-box .job-description .job-description-table th {
+  padding: 10px 2.5em 10px 0;
+  border-right: 1px solid #d5d5d5;
+  width: 12%;
+  font-weight: 500;
+  text-align: left;
+  vertical-align: top;
+}
+@media screen and (max-width: 768px) {
+  .description-box .job-description .job-description-table th {
+    width: 26.8%;
+    padding: 7px 0.8125em 7px 0;
+  }
+}
+.description-box .job-description .job-description-table td {
+  padding: 10px 0 10px 2.5em;
+  width: 60%;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .description-box .job-description .job-description-table td {
+    width: auto;
+    padding: 7px 0 7px 0.8125em;
+  }
+}
+.description-box .welfare-list {
+  padding: 0;
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .description-box .welfare-list {
+    font-size: 1.3rem;
+  }
+}
+.description-box .welfare-list li {
+  padding-left: 1.375em;
+  text-indent: -1.375em;
+}
+.description-box .welfare-list li:before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+  border: 3px solid #333;
+  border-radius: 6px;
+  vertical-align: baseline;
+}
+@media screen and (max-width: 768px) {
+  .description-box .welfare-list li:before {
+    width: 5px;
+    height: 5px;
+    border: 2px solid #333;
+    border-radius: 5px;
+  }
+}
+.description-box .flow-image {
+  margin-top: 30px;
+}
+.description-box .flow-note {
+  margin-top: 51px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #e0e9ff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .description-box .flow-note {
+    margin-top: 31px;
+    padding: 8 px 10px;
+    border-radius: 0;
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+}
+
+/* -----
+ * 個人情報の保護について
+----------------------------------------------------------------------------- */
+.recruit-privacy {
+  margin-top: 7.5em;
+  padding: 3.125em 2.5em;
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .recruit-privacy {
+    max-width: calc(100% - 10.6666vw);
+    margin: 3.125em auto 0;
+    padding: 2.5em 5.33vw;
+  }
+}
+.recruit-privacy h3 {
+  margin: 0 0 20px;
+  color: #4372c1;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3090909091;
+}
+@media screen and (max-width: 768px) {
+  .recruit-privacy h3 {
+    font-size: 1.6rem;
+  }
+}
+.recruit-privacy .recruit-privacy-text {
+  max-width: 780px;
+  margin: 0 auto 1.5em;
+  text-align: center;
+  line-height: 1.8;
+}
+@media screen and (max-width: 768px) {
+  .recruit-privacy .recruit-privacy-text {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+}
+.recruit-privacy .recruit-privacy-text a {
+  color: #4372c1;
+}

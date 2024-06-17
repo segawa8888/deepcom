@@ -1,0 +1,62 @@
+@mixin r {
+font-weight: 400;
+}
+@mixin m {
+font-weight: 500;
+}
+@mixin b {
+font-weight: 700;
+}
+
+@mixin en-ttl {
+font-family: 'Roboto', sans-serif;
+font-weight:900;
+font-style:italic;
+}
+@mixin en-small {
+font-family: 'Roboto', sans-serif;
+font-weight:500;
+font-style:italic;
+}
+
+@mixin en-t {
+font-family: 'Roboto', sans-serif;
+font-weight:300;
+font-style:italic;
+}
+@mixin en-m {
+font-family: 'Roboto', sans-serif;
+font-weight:500;
+font-style:italic;
+}
+
+/*テキスト配置*/
+.txt-c {
+text-align:center !important;
+}
+.txt-l {
+text-align:left !important;
+}
+.txt-r {
+text-align:right !important;
+}
+
+.txt {
+	&-red {
+	color:$red;
+	}
+}
+
+/*注釈用※*/
+.attention {
+position:relative;
+font-size:1.3rem;
+line-height:1.5;
+padding-left:2em;
+	&:before {
+	content:'※';
+	position:absolute;
+	left:0;
+	top:0;
+	}
+}

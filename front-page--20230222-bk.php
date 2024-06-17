@@ -1,0 +1,619 @@
+<?php
+add_action('wp_enqueue_scripts', function () {
+  // アクセサイト運用
+  wp_enqueue_script( 'top', get_theme_file_uri( '/assets/js/top.min.js' ), '', filemtime( get_theme_file_path( '/assets/js/top.min.js' ) ), true );
+  wp_enqueue_style( 'layout-top', get_theme_file_uri( '/assets/css/layout-top.css' ), '', filemtime( get_theme_file_path( '/assets/css/layout-top.css' ) ) );
+
+  // Deepcom運用
+  wp_enqueue_style( 'style-top', get_theme_file_uri( '/css/style-top.css' ), '', filemtime( get_theme_file_path( '/css/style-top.css' ) ) ); 
+
+});
+
+get_header();
+?>
+
+<script>
+  jQuery(document).ready(function () {
+  // swiperをイニシャライズ
+  var mySwiper = new Swiper ('.swiper-container', {
+    // オプションのパラメーターを指定
+    direction: 'horizontal',
+    effect: "slid",
+    loop: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      dynamicBullets: true,
+      clickable: true,
+    },
+    slidesPerView: 3,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    })
+  });
+</script>
+
+<main class="g-main">
+  <div class="top-container">
+
+    <!--
+    <div class="main-image">
+      <div class="adjust-width">
+        <div class="image">
+          <picture>
+            <source media="(max-width: 767px)" srcset="<?php echo get_theme_file_uri('/assets/images/top/main-img-sp.png'); ?>">
+            <img src="<?php echo get_theme_file_uri('/assets/images/top/main-img.png'); ?>" alt="Build The Future">
+          </picture>
+        </div>
+        <div class="contents">
+          <p class="main-copy">Build The Future</p>
+          <div class="site-copy">
+            <p class="text">Microsoft製品に関する各種導入支援サービスと運用支援サービスを中心に、サービスを展開しています。</p>
+            <div class="icon">
+              <picture>
+                <source media="(max-width: 767px)" srcset="<?php echo get_theme_file_uri('/assets/images/top/main-img-gold-ms-partner-sp.png'); ?>">
+                <img src="<?php echo get_theme_file_uri('/assets/images/top/main-img-gold-ms-partner.png'); ?>" alt="Gold Microsoft Partner">
+              </picture>
+            </div>
+          </div>
+          <p class="l-button"><a href="/contact/">まずは無料相談</a></p>
+        </div>
+      </div>
+      <div class="scroll-down"><span>SCROLL DOWN</span><i></i></div>
+    </div>-->
+    
+    <!--ここから-->
+    <?php /*if (is_user_logged_in()){ */?>
+    
+    <div class="main-image">
+      <div class="adjust-width">
+        <div class="image2">
+          <picture>
+            <source media="(max-width: 767px)" srcset="<?php echo get_theme_file_uri('/assets/images/top/main-img-sp.png'); ?>">
+            <img src="<?php echo get_theme_file_uri('/assets/images/top/kv.png'); ?>" alt="Build The Future">
+          </picture>
+        </div>
+        <div class="contents" style="width:100%;">
+          <p class="main-copy2"style="color: black;line-height: 1;font-family: a-otf-gothic-mb101-pr6n, sans-serif;font-style: normal;font-weight: bold;">社内の<br>Microsoftクラウドを<br>より利用促進したい</p>
+          <p class="l-button" style="margin-top: 5%;">
+            <a class="lbtn" href="/services/">
+              <img src="https://deepcom.co.jp/wps/wp-content/themes/deepcom/assets/images/top/main-img-gold-ms-partner.png" style="height: 75px;">
+              DeepComの提案<img src="https://deepcom.co.jp/wps/wp-content/themes/deepcom/assets/images/top/arrow.png" style="height: 65px;padding-left: 10px;vertical-align: text-bottom;">
+            </a>
+          </p>
+        </div>
+      </div>
+      <div class="scroll-down"><span>SCROLL DOWN</span><i></i></div>
+      <div class="image2">
+          <picture>
+            <source media="(max-width: 767px)" srcset="<?php echo get_theme_file_uri('/assets/images/top/BuildTheFuture.png'); ?>">
+            <source media="(max-width: 1000px)" srcset="">
+            <img src="<?php echo get_theme_file_uri('/assets/images/top/dummy.png'); ?>" alt="Build The Future">
+          </picture>
+        </div>
+    </div>
+
+    <?php /*}else{*/ ?>
+    <?php /*}*/ ?>
+    <!--ここまで-->
+
+    <section class="l-section-container -decoration-square-left section-service">
+      <div class="adjust-width">
+        <h2 class="l-section-title"><span class="en">SERVICE</span><span class="ja">サービス紹介</span></h2>
+        <div class="l-section-description">Microsoft製品に関する各種導入支援サービスと運用支援サービスを中心に、サービスを展開しています。</div>
+
+        <div class="service-group js-wp">
+          <div class="service-col">
+            <div class="image"><img src="<?php echo get_theme_file_uri('/assets/images/top/service-img01.png'); ?>" alt=""></div>
+            <div class="content">
+              <h3>Microsoft 365</h3>
+              <div class="text">
+                <p>近年ビジネス速度は向上しており、コミュニティ基盤を用いた迅速な意思疎通と判断が必要です。弊社ではAzureAD、Exchange、Teams、SharePointを主軸に、コミュニティ活性・IT運用負担軽減をミッションとしています。</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-col">
+            <div class="image"><img src="<?php echo get_theme_file_uri('/assets/images/top/service-img02.png'); ?>" alt=""></div>
+            <div class="content">
+              <h3>Microsoft Azure</h3>
+              <div class="text">
+                <p>信頼性の高いクラウドサービスであるMicrosoft Azureに力を入れています。ビッグデータと分析、システム統合、クラウド移行。要望に合ったMicrosoft Azureのソリューションをご提供します。クラウドの利点を活かしたWebシステム開発・移行お任せください。</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-col">
+            <div class="image"><img src="<?php echo get_theme_file_uri('/assets/images/top/service-img03.png'); ?>" alt=""></div>
+            <div class="content">
+              <h3>PowerPlatform</h3>
+              <div class="text">
+                <p>目まぐるしい顧客ニーズの変化に伴い、業務プロセス整備の遅れは、機会の損失に繋がります。自社リソースの最適化と、業務プロセスの構築・見直しをPower Platformを用いて支援しています。</p>
+              </div>
+            </div>
+          </div>
+          <div class="service-col">
+            <div class="image"><img src="<?php echo get_theme_file_uri('/assets/images/top/service-img04.png'); ?>" alt=""></div>
+            <div class="content">
+              <h3>SharePoint</h3>
+              <div class="text">
+                <p>導入からWebパーツの開発・導入後の運用支援や活用アドバイスまで、トータルにご支援します。SharePointに関する悩みは、かかわる役割ごとに多岐に渡ります。SharePointの利用や運用に携わる、あらゆる皆さまのお悩みを解決致します。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <br>
+          <p class="l-button l-button-blue"><a href="/products/">サービス一覧</a></p>
+      </div>
+    </section>
+
+    <section class="l-section-container -decoration-square-right -decoration-square-right-green section-feature">
+      <div class="adjust-width">
+        <h2 class="l-section-title l-section-title-green"><span class="en">ADVANTAGE</span><span class="ja">DeepComの３つの強み</span></h2>
+        <div class="l-section-description">Microsoft製品のパイオニアならではの技術力と豊富なノウハウが生み出す業界随一の強みを活かし、お客様が独自に運用する事を前提としたデジタルトランスフォーメーション（DX）領域での包括的なサービスを提供いたします。</div>
+        <div class="feature-group">
+          <div class="feature-style-media js-wp">
+            <div class="image"><img src="<?php echo get_theme_file_uri('/assets/images/top/top-history2.png'); ?>" alt=""></div>
+            <div class="content">
+              <h3>業界随一の豊富な実績とノウハウ</h3>
+              <div class="text">
+                <p>当社は黎明期である2005年頃からMicrosoft SharePointに関わってきたメンバーで構成されております。<br>
+導入支援、デザイン、拡張機能パーツ開発、データ移行含むバージョン移行、運用支援など多数の開発・運用に携わってまいりました。<br>
+豊富な実績やノウハウは業界随一です。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-style-media js-wp">
+            <div class="image"><img src="<?php echo get_theme_file_uri('/assets/images/top/gold-ms-partner.png'); ?>" alt=""></div>
+            <div class="content">
+              <h3>Microsoft Goldコンピテンシーパートナー</h3>
+              <div class="text">
+                <p>当社はMicrosoft ソリューションの分野でクラス最高の能力を備えていることを証明する「Microsoft Goldコンピテンシーパートナー」です。さらにメンバーの大半が「MCP（Microsoft Certification Program）」所有者です。Microsoft製品のパイオニアならではの、確かな技術力をお約束します。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-style-media js-wp">
+            <div class="image"><img src="<?php echo get_theme_file_uri('/assets/images/top/challenge.png'); ?>" alt=""></div>
+            <div class="content">
+              <h3>絶やさない新技術へのチャレンジ</h3>
+              <div class="text">
+                <p>お客様からの多様なニーズに応えるべく、新技術へのチャレンジも絶やしません。技術リサーチに加え、自社での環境構築を経て、新たなサービスやプロダクトのリリースを次々に行なっております。
+<br>
+全ては「お客様がご自身で運用できるシステムの提供を行うため」。それがディープコムにできるデジタルトランスフォーメーション（DX）支援です。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="l-section-container -decoration-square-left -decoration-square-left-olive section-products">
+      <div class="adjust-width">
+        <h2 class="l-section-title l-section-title-olive"><span class="en">PRODUCTS</span><span class="ja">製品紹介</span></h2>
+        <!--<div class="l-section-description">製品紹介のテキストが入りますテキストが入りますテキストが入りますテキストが入ります</div>-->
+
+        <div class="products-group js-wp">
+          <!--<div class="products-col">
+            <div class="image"><img src="<?php echo get_theme_file_uri('/assets/images/top/dummy-thumb-product.jpg'); ?>" alt=""></div>
+            <div class="content">
+              <h3><strong>PowerApps</strong><br>すぐ使えるパック</h3>
+            </div>
+          </div>-->
+          <!-- <div class="products-col">
+            <div class="image"><a href="/sharepointtimeline/"><img src="<?php echo get_theme_file_uri('/images/ScheduleTimelineProducts.png'); ?>" alt=""></a></div>
+            <div class="content">
+              <h3><a href="/sharepointtimeline/"><strong>SharePoint</strong><br>スケジューラー連動</a></h3>
+            </div>
+          </div> -->
+          <!-- <div class="products-col">
+            <div class="image"><a href="/spfxparts/"><img src="<?php echo get_theme_file_uri('/images/UnreadreadProducts.png'); ?>" alt=""></a></div>
+            <div class="content">
+              <h3><a href="/spfxparts/"><strong>SharePoint</strong><br>未既読</a></h3>
+            </div>
+          </div> -->
+          <!-- <div class="products-col">
+            <div class="image"><a href="/access-permission-acquisition-tool/"><img src="<?php echo get_theme_file_uri('/images/PermissionProducts.png'); ?>" alt=""></a></div>
+            <div class="content">
+              <h3><a href="/access-permission-acquisition-tool/"><strong>SharePoint</strong><br>アクセス権限</a></h3>
+            </div>
+          </div> -->
+          <!--<div class="products-col">
+            <div class="image"><img src="<?php echo get_theme_file_uri('/assets/images/top/dummy-thumb-product.jpg'); ?>" alt=""></div>
+            <div class="content">
+              <h3><strong>SharePoint</strong><br>5000件問題</h3>
+            </div>
+          </div>-->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide products-col" style="margin: 0;margin-right:-30px;">
+                  <div class="image"><a href="/sharepointtimeline/"><img src="<?php echo get_theme_file_uri('/images/ScheduleTimelineProducts.png'); ?>" alt=""></a></div>
+                  <div class="content">
+                    <a href="/sharepointtimeline/"  style="font-size:2rem;">SharePoint<br>スケジューラー連動</a>
+                  </div>
+                </div>  
+                <div class="swiper-slide products-col" style="margin: 0;margin-right:-30px;">
+                  <div class="image"><a href="/spfxparts/"><img src="<?php echo get_theme_file_uri('/images/UnreadreadProducts.png'); ?>" alt=""></a></div>
+                  <div class="content">
+                    <a href="/spfxparts/" style="font-size:2rem;">SharePoint<br>未既読</a>
+                  </div>
+                </div>    
+                <div class="swiper-slide products-col" style="margin: 0;margin-right:-30px;">
+                  <div class="image"><a href="/access-permission-acquisition-tool/"><img src="<?php echo get_theme_file_uri('/images/PermissionProducts.png'); ?>" alt=""></a></div>
+                  <div class="content">
+                    <a href="/access-permission-acquisition-tool/" style="font-size:2rem;">SharePoint<br>アクセス権限</a>
+                  </div>
+                </div>  
+                <div class="swiper-slide products-col" style="margin: 0;margin-right:-30px;">
+                  <div class="image"><a href="/likehitswebpart/"><img src="<?php echo get_theme_file_uri('/images/LikeHitsWebPart.png'); ?>" alt=""></a></div>
+                  <div class="content">
+                    <a href="/likehitswebpart/" style="font-size:2rem;">SharePoint<br>閲覧数/いいね数</a>
+                  </div>
+                </div>  
+                <div class="swiper-slide products-col" style="margin: 0;margin-right:-30px;">
+                  <div class="image"><a href="/sharepointtab/"><img src="<?php echo get_theme_file_uri('/images/TabMordenWebPart.png'); ?>" alt=""></a></div>
+                  <div class="content">
+                    <a href="/sharepointtab/" style="font-size:2rem;">SharePoint<br>タブ化</a>
+                  </div>
+                </div>
+                <div class="swiper-slide products-col" style="margin: 0;margin-right:-30px;">
+                  <div class="image"><a href="/advancedsearch/"><img src="<?php echo get_theme_file_uri('/images/advancedsearchwebpart.png'); ?>" alt=""></a></div>
+                  <div class="content">
+                    <a href="/sharepointtab/" style="font-size:2rem;">SharePoint<br>検索拡張機能</a>
+                  </div>
+                </div> 
+            </div>
+                <div class="swiper-button-next swiperButton"></div>
+                <div class="swiper-button-prev swiperButton"></div>
+          </div>
+
+        </div>
+          <br>
+          <p class="l-button l-button-olive"><a href="/products/">プロダクト一覧</a></p>
+      </div>
+    </section>
+
+    <section class="l-section-container -decoration-square-right -decoration-square-right-orange section-download">
+      <div class="adjust-width">
+        <h2 class="l-section-title l-section-title-orange"><span class="en">DOWNLOAD</span><span class="ja">資料ダウンロード</span></h2>
+        <!--<div class="l-section-description">調査レポート・ホワイトペーパーなどお役立ち資料を無料でダウンロードいただけます。</div>-->
+        <div class="download-group">
+          <div class="download-block-col js-wp">
+            <!-- <?php
+              $args = array(
+                  'post_type' => 'downloads',
+                  'post_status' => 'publish',
+                  'paged' => $paged,
+                  'posts_per_page' => 3,
+                  'orderby' => array('date' => 'DESC')
+              );
+              $search_query = new WP_Query( $args );
+              global $post;
+              if ( $search_query->have_posts() ) :
+                while ( $search_query->have_posts() ) :
+                  $search_query->the_post();
+                  setup_postdata($post);
+                  $title = $post->post_title;
+                  $thumb = get_the_post_thumbnail_url($post->ID, 'full');
+                  $post_date = mysql2date('Y.m.d', $post->post_date);
+                  $product_cat = get_the_terms( $post->ID, 'product' );
+                  $objective_cat = get_the_terms( $post->ID, 'objective' );
+                  $category_list = array();
+                  if(!empty($objective_cat)) {
+                    foreach($objective_cat as $_buf) {
+                      $category_list[] = array('name' => $_buf->name, 'slug' => '/blog/objective/' . $_buf->slug . '/');
+                    }
+                  }
+                  if(!empty($product_cat)) {
+                    foreach($product_cat as $_buf) {
+                      $category_list[] = array('name' => $_buf->name, 'slug' => '/blog/product/' . $_buf->slug . '/');
+                    }
+                  }
+            ?>
+            <div class="download-col">
+              <div class="image"><a href="<?php echo get_permalink( $post->ID ); ?>"><img class="js-ofi" src="<?php echo $thumb; ?>" alt="<?php echo $title; ?>"></a></div>
+              <div class="content">
+                <p class="title"><a href="<?php echo get_permalink( $post->ID );  ?>"><?php echo $title; ?></a></p>
+                <ul class="l-category-list">
+                  <?php foreach($category_list as $cat_list): ?>
+                  <li><span><?php echo $cat_list['name']; ?></span></li>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
+            </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+              endif;
+            ?> -->
+
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <?php
+                    $args = array(
+                      'post_type' => 'downloads',
+                      'post_status' => 'publish',
+                      'paged' => $paged,
+                      'posts_per_page' => 10,
+                      'orderby' => array('date' => 'DESC')
+                    );          
+                  $loop = new WP_Query($args);
+                  global $post;
+                  ?>
+                  <?php
+                  /* Start the Loop */
+                  while ($loop->have_posts()) : $loop->the_post();
+                  ?>
+                      <div class="swiper-slide swiper-slide__inner">
+                        <div class="swiper-slide__inner">
+                          <div class="swiper-slide__inner--item">
+                            <div class="download-col" style="width: 100%;">
+                              <div class="image"> 
+                                <a href="<?php the_permalink(); ?>" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>)"><img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full');?>" style="object-fit:cover;"></a>
+                              </div>
+                              <div class="content">
+                                <p class="title">
+                                  <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?= $post->post_title; ?>">
+                                    <?php echo $post->post_title; ?>
+                                  </a>
+                                </p>
+  <!--                               <ul class="l-category-list">
+                                  <?php foreach($category_list as $cat_list): ?>
+                                  <li><span><?php echo $cat_list['name']; ?></span></li>
+                                  <?php endforeach; ?>
+                                </ul> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  <?php
+                  endwhile;
+                  wp_reset_query();
+                  ?>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiperButton"></div>
+                <div class="swiper-button-prev swiperButton"></div>
+              </div>
+          </div>
+          <br>
+          <p class="l-button l-button-orange"><a href="/downloads/">資料ダウンロード一覧</a></p>
+        </div>
+      </div>
+    </section>
+    <!--<section class="l-section-container -decoration-square-right section-download">
+      <div class="adjust-width">
+        <h2 class="l-section-title"><span class="en">DOWNLOAD</span><span class="ja">資料ダウンロード</span></h2>
+        <div class="l-section-description">調査レポート・ホワイトペーパーなどお役立ち資料を無料でダウンロードいただけます。</div>
+        <div class="download-group">
+          <div class="download-block-col js-wp">-->
+            <?php
+              /*$args = array(
+                  'post_type' => 'downloads',
+                  'post_status' => 'publish',
+                  'paged' => $paged,
+                  'posts_per_page' => 3,
+                  'orderby' => array('date' => 'DESC')
+              );
+              $search_query = new WP_Query( $args );
+              global $post;
+              if ( $search_query->have_posts() ) :
+                while ( $search_query->have_posts() ) :
+                  $search_query->the_post();
+                  setup_postdata($post);
+                  $title = $post->post_title;
+                  $thumb = get_the_post_thumbnail_url($post->ID, 'full');
+                  $post_date = mysql2date('Y.m.d', $post->post_date);
+                  $product_cat = get_the_terms( $post->ID, 'product' );
+                  $objective_cat = get_the_terms( $post->ID, 'objective' );
+                  $category_list = array();
+                  if(!empty($objective_cat)) {
+                    foreach($objective_cat as $_buf) {
+                      $category_list[] = array('name' => $_buf->name, 'slug' => '/blog/objective/' . $_buf->slug . '/');
+                    }
+                  }
+                  if(!empty($product_cat)) {
+                    foreach($product_cat as $_buf) {
+                      $category_list[] = array('name' => $_buf->name, 'slug' => '/blog/product/' . $_buf->slug . '/');
+                    }
+                  }
+            */ ?>
+            <!--<div class="download-col">
+              <div class="image"><a href="<?php /*echo get_permalink( $post->ID ); */ ?>"><img class="js-ofi" src="<?php /* echo $thumb; */ ?>" alt="<?php /* echo $title; */ ?>"></a></div>
+              <div class="content">-->
+                <!--<p class="title"><a href=""><?php /*echo $title;*/ ?></a></p>-->
+                <!--<p class="title"><a href="<?php /*echo get_permalink( $post->ID ); */ ?>"><?php /*echo $title;*/ ?></a></p>
+                <ul class="l-category-list">
+                  <?php #foreach($category_list as $cat_list): ?>
+                  <li><span><?php #echo $cat_list['name']; ?></span></li>
+                  <?php #endforeach; ?>
+                </ul>
+              </div>
+            </div>-->
+            <?php /*
+                endwhile;
+                wp_reset_postdata();
+              endif;
+              */
+            ?>
+          <!--</div>
+
+          <p class="l-button -blue"><a href="/download/">資料ダウンロード一覧</a></p>
+        </div>
+      </div>
+    </section>-->
+
+    <section class="l-section-container -decoration-square-left -decoration-square-left-red section-blog">
+      <div class="adjust-width">
+        <h2 class="l-section-title l-section-title-red"><span class="en">BLOG</span><span class="ja">ブログ</span></h2>
+        <!--<div class="l-section-description">Microsoft製品に関する、運用上のTipsを中心に様々な記事を掲載しています。</div>-->
+        <div class="blog-group">
+          <div class="blog-block-col js-wp">
+            <!-- <?php
+              $args = array(
+                  'post_type' => 'post',
+                  'post_status' => 'publish',
+                  'paged' => $paged,
+                  'posts_per_page' => 3,
+                  'orderby' => array('date' => 'DESC')
+              );
+              $search_query = new WP_Query( $args );
+              global $post;
+              if ( $search_query->have_posts() ) :
+                while ( $search_query->have_posts() ) :
+                  $search_query->the_post();
+                  setup_postdata($post);
+                  $title = $post->post_title;
+                  $thumb = get_the_post_thumbnail_url($post->ID, 'full');
+                  $post_date = mysql2date('Y.m.d', $post->post_date);
+                  $product_cat = get_the_terms( $post->ID, 'product' );
+                  $objective_cat = get_the_terms( $post->ID, 'objective' );
+                  $category_list = array();
+                  if(!empty($objective_cat)) {
+                    foreach($objective_cat as $_buf) {
+                      $category_list[] = array('name' => $_buf->name, 'slug' => '/blog/objective/' . $_buf->slug . '/');
+                    }
+                  }
+                  if(!empty($product_cat)) {
+                    foreach($product_cat as $_buf) {
+                      $category_list[] = array('name' => $_buf->name, 'slug' => '/blog/product/' . $_buf->slug . '/');
+                    }
+                  }
+            ?> -->
+            <!-- <div class="blog-col">
+              <div class="image"><a href=""><img class="js-ofi" src="<?php echo $thumb; ?>" alt="<?php echo $title; ?>"></a></div>
+              <div class="image"><a href="<?php echo get_permalink( $post->ID ); ?>"><img class="js-ofi" src="<?php echo $thumb; ?>" alt="<?php echo $title; ?>"></a></div>
+              <div class="content">
+                <p class="title"><a href=""><?php echo $title; ?></a></p>
+                <p class="title"><a href="<?php echo get_permalink( $post->ID ); ?>"><?php echo $title; ?></a></p>
+                <p class="date"><?php echo $post_date; ?></p>
+                <ul class="l-category-list">
+                  <?php foreach($category_list as $cat_list): ?>
+                  <li><span><?php echo $cat_list['name']; ?></span></li>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
+            </div> -->
+            <!-- <?php
+                endwhile;
+                wp_reset_postdata();
+                endif;
+            ?> -->
+            
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <?php
+                      $args = array(
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                        'paged' => $paged,
+                        'posts_per_page' => 6,
+                        'orderby' => array('date' => 'DESC')
+                      );          
+                    $loop = new WP_Query($args);
+                    global $post;
+                    ?>
+                    <?php
+                    /* Start the Loop */
+                    while ($loop->have_posts()) : $loop->the_post();
+                    ?>
+                      <div class="swiper-slide swiper-slide__inner">
+                        <div class="swiper-slide__inner">
+                          <div class="swiper-slide__inner--item">
+                            <div class="blog-col"  style="width: 100%;">
+                              <div class="image">
+                                  <a href="<?php the_permalink(); ?>" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>)"><img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full');?>"></a>
+                              </div>
+                              <div class="content">
+                                <p class="title">
+                                  <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?= $post->post_title; ?>">
+                                  <?php echo $post->post_title; ?>
+                                  </a>
+                                </p>  
+                                <p class="date">
+                                  <span class="date"><?php the_time('Y.m.d'); ?></span>
+                                </p>
+<!--                                 <ul class="l-category-list">
+                                  <?php foreach($category_list as $cat_list): ?>
+                                  <li><span><?php echo $cat_list['name']; ?></span></li>
+                                  <?php endforeach; ?>
+                                </ul> -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <?php
+                    endwhile;
+                    wp_reset_query();
+                    ?>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiperButton"></div>
+                <div class="swiper-button-prev swiperButton"></div>
+              </div>
+          </div>
+          <p class="l-button l-button-red"><a href="/blog/">ブログ一覧</a></p>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="l-section-container section-news">
+      <div class="adjust-width">
+        <h2 class="l-section-title l-section-title-pink"><span class="en">NEWS</span><span class="ja">ニュース</span></h2>
+
+        <div class="news-group">
+          <div class="news-row">
+          <?php echo do_shortcode('[showwhatsnew]'); ?>
+          <!--<div class="news-info">
+              <div class="date">2021.01.29</div>
+              <div class="category"><a href="">リリース</a></div>
+            </div>
+            <p class="news-title"><a href="">ブログ記事を掲載しました。</a></p>
+          </div>
+          <div class="news-row">
+            <div class="news-info">
+              <div class="date">2021.01.29</div>
+              <div class="category"><a href="">リリース</a></div>
+            </div>
+            <p class="news-title"><a href="">ブログ記事を掲載しました。ブログ記事を掲載しました。ブログ記事を掲載しました。ブログ記事を掲載しました。ブログ記事を掲載しました。ブログ記事を掲載しました。</a></p>
+          </div>
+          <div class="news-row">
+            <div class="news-info">
+              <div class="date">2021.01.29</div>
+              <div class="category"><a href="">リリース</a></div>
+            </div>
+            <p class="news-title"><a href="">ブログ記事を掲載しました。</a></p>
+          </div>
+          <div class="news-row">
+            <div class="news-info">
+              <div class="date">2021.01.29</div>
+              <div class="category"><a href="">リリース</a></div>
+            </div>
+            <p class="news-title"><a href="">ブログ記事を掲載しました。ブログ記事を掲載しました。ブログ記事を掲載しました。ブログ記事を掲載しました。ブログ記事を掲載しました。ブログ記事を掲載しました。</a></p>
+          </div>
+          <div class="news-row">
+            <div class="news-info">
+              <div class="date">2021.01.29</div>
+              <div class="category"><a href="">リリース</a></div>
+            </div>
+            <p class="news-title"><a href="">ブログ記事を掲載しました。</a></p>-->
+          </div>
+        </div>
+
+        <p class="l-button l-button-pink"><a href="/news/">ニュース一覧</a></p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<?php get_footer(); ?>

@@ -1,0 +1,72 @@
+// colors
+$white: #ffffff;
+$blk: #000000;
+$gray: #f9f9f9;
+$blue: #4372c1;
+$d_blue: #244aa4;
+$border_gray: #E5E5E5;
+$red: #FF2626;
+
+$l_blue: #CFDDF4;
+
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block; 
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin anim {
+transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/*flexレイアウト用*/
+@mixin flex-space {// space-between
+@include flexbox;
+@include justify-content(space-between);
+@include flex-wrap(wrap);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+@mixin flex-center {// center
+@include flexbox;
+@include justify-content(center);
+@include flex-wrap(wrap);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+@mixin flex-start {// left
+@include flexbox;
+@include flex-wrap(wrap);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+@mixin flex-end {// right
+@include flexbox;
+@include flex-wrap(wrap);
+@include justify-content(flex-end);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+@mixin flex-middle {// v middle
+@include flexbox;
+@include justify-content(center);
+@include align-items(center);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+
+@mixin flex-left {// align left
+@include justify-content(flex-start);
+}
+@mixin flex-right {// align right
+@include justify-content(flex-end);
+}

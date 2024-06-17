@@ -1,0 +1,219 @@
+// colors
+
+
+$p-gray: #F5F4EF;
+
+
+$d-gray: #333333;
+$b-gray: #8C989F;//blue-gray
+$l-blue: #8FCCF0;
+$p-blue: #C2E5FA;
+$yellow: #FFF264;
+$p-yellow: #F5F4EF;
+$pp-gray: #f2f2f2;
+$ld-gray: #D3D3D3;
+
+
+
+
+/*compass theme color*/
+$white: #ffffff;
+$blk: #000000;
+$orange: #F76502;//hover
+$l-orange: #FFC13C;
+$p-orange: #FFF7C6;
+$gray: #818181;
+$blue: #0051B0;
+$red: #FF0000;
+$sand: #EDEBE2;//contact-bg
+
+$l-gray: #dddddd;
+$txt-gray: #979797;
+
+
+// fonts 
+
+$primary-font: 'Noto Sans JP', sans-serif;
+
+
+// header Height
+
+$header-height-S: 54px;
+$header-height-L: 80px;
+
+// Navigation Width
+
+$nav-width-S: 260px;
+$nav-width-L: 50%;
+
+
+// z-index
+
+$below-content: 1;
+$content: 2;
+$above-content: 3;
+
+// content-width
+
+$content-width: 1100px;
+
+// SP common LRpadding
+$LRpadding:12px;
+
+
+// common opacity
+$opacity:0.8;
+
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block; 
+    clear: both;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin bg-l {
+background-repeat:no-repeat;
+background-position:0% 50%;
+}
+
+@mixin bg {
+background-size:cover;
+background-position:50% 50%;
+background-repeat:no-repeat;
+}
+
+@mixin shadow {
+-webkit-box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.3);
+-moz-box-shadow:    0px 0px 20px 0px rgba(50, 50, 50, 0.3);
+box-shadow:         0px 0px 20px 0px rgba(50, 50, 50, 0.3);
+}
+
+@mixin shadow2 {
+box-shadow: 0 10px 30px 0 rgba(0,0,0,0.10);
+}
+
+@mixin sec-arrow {
+content:'';
+width:116px;
+height:63px;
+position:absolute;
+left:50%;
+bottom:-63px;
+margin-left:-58px;
+z-index:1;
+}
+
+
+@mixin anim {
+transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.alpha {//ホバーアニメーション透明度
+transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+opacity:1;
+	&:hover {
+	opacity:$opacity;
+	}
+}
+
+/*矢印ボタン用*/
+@mixin arrow-r {
+content:'';
+width:10px;
+height:10px;
+transform: rotate(45deg);
+position:absolute;
+right:15px;
+top:50%;
+margin-top:-5px;
+border-top:2px solid $blk;
+border-right:2px solid $blk;
+}
+@mixin arrow-l {
+content:'';
+width:10px;
+height:10px;
+transform: rotate(-45deg);
+position:absolute;
+left:15px;
+top:50%;
+margin-top:-5px;
+border-top:2px solid $blk;
+border-left:2px solid $blk;
+}
+@mixin arrow-d {
+content:'';
+width:10px;
+height:10px;
+transform: rotate(135deg);
+position:absolute;
+right:15px;
+top:50%;
+margin-top:-5px;
+border-top:2px solid $blk;
+border-right:2px solid $blk;
+}
+@mixin arrow-u {
+content:'';
+width:10px;
+height:10px;
+transform: rotate(-45deg);
+position:absolute;
+right:15px;
+top:50%;
+margin-top:-5px;
+border-top:2px solid $blk;
+border-right:2px solid $blk;
+}
+
+/*flexレイアウト用*/
+@mixin flex-space {// space-between
+@include flexbox;
+@include justify-content(space-between);
+@include flex-wrap(wrap);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+@mixin flex-center {// center
+@include flexbox;
+@include justify-content(center);
+@include flex-wrap(wrap);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+@mixin flex-start {// left
+@include flexbox;
+@include flex-wrap(wrap);
+@include justify-content(flex-start);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+@mixin flex-end {// right
+@include flexbox;
+@include flex-wrap(wrap);
+@include justify-content(flex-end);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+@mixin flex-middle {// v middle
+@include flexbox;
+@include justify-content(center);
+@include align-items(center);
+	> * {
+	@include flex(0 0 auto);
+	}
+}
+
+@mixin flex-left {// align left
+@include justify-content(flex-start);
+}
+@mixin flex-right {// align right
+@include justify-content(flex-end);
+}

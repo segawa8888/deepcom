@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/*======================================================================
+ * サイト全体共通レイアウト ※Deepcom運用
+======================================================================*/
+/*------------------------------------------------------------
+ * container
+------------------------------------------------------------*/
+.g-container {
+}
+
+@media screen and (max-width: 1365px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/*------------------------------------------------------------
+ * header
+------------------------------------------------------------*/
+.g-header {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/*------------------------------------------------------------
+ * footer
+------------------------------------------------------------*/
+.g-footer {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/*------------------------------------------------------------
+ * sidebar
+------------------------------------------------------------*/
+.g-sidebar {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/* -----
+ * 共通パーツ
+----------------------------------------------------------------------------- */
+/** セクション設定 **/
+.l-section-container {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** セクションタイトル **/
+.l-section-title {
+}
+
+.l-section-description {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** ボタン **/
+.l-button {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** パンくず **/
+.l-breadcrumb {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** 記事一覧（カード型） **/
+.l-post-card {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** カテゴリー一覧 **/
+.l-category-list {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** タグ一覧 **/
+.l-tag-list {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** タグフィルター **/
+.l-tag-filter {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** タブ切り替えボタン **/
+.l-tab-switch {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** ページネーション **/
+.l-pagination {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/** 検索フォーム **/
+.l-search-form {
+}
+
+@media screen and (max-width: 768px) {
+}
